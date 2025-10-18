@@ -47,8 +47,11 @@ ppi = df[df["PPI"].str.lower() == "sim"]
 pcd = df[df["PCD"].str.lower() == "sim"]
 
 st.write("### 🟣 PPI")
-st.dataframe(ppi[["Classificação", "Nome", "Média Até Aqui", "Nota Preliminar", "Nota Objetiva"]])
+st.dataframe(
+    ppi[["Classificação", "Nome", "Média Até Aqui", "Nota Preliminar", "Nota Objetiva"]]
+)
 
 st.write("### 🔴 PCD")
-st.dataframe(pcd[["Classificação", "Nome", "Média Até Aqui", "Nota Preliminar", "Nota Objetiva"]])
-
+st.dataframe(
+    pcd[["Classificação", "Nome", "Média Até Aqui", "Nota Preliminar", "Nota Objetiva"]]
+)
