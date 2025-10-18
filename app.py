@@ -10,6 +10,9 @@ st.title("Ranking — Ampla, PPI e PCD")
 # ========================
 df = pd.read_excel("notas.xlsx", dtype=str)
 
+# 🔸 Padroniza todos os nomes em maiúsculas
+df["Nome"] = df["Nome"].str.upper()
+
 # Converte vírgulas e garante números
 for col in ["Nota Preliminar", "Nota Objetiva", "Média Até Aqui"]:
     df[col] = df[col].str.replace(",", ".").astype(float)
