@@ -68,6 +68,5 @@ st.dataframe(
             "Média Até Aqui": "{:.2f}",
         }),
     use_container_width=True,
-    height
-
-
+    height=(len(pcd) + 1) * 35
+)
