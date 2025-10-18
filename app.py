@@ -29,13 +29,12 @@ def highlight(row):
 
 # Exibição
 st.write("### 🏁 Ranking Geral (Ampla com destaque para PPI e PCD)")
-st.dataframe(
+st.table(
     df.style.apply(highlight, axis=1).format({
         "Nota Preliminar": "{:.2f}",
         "Nota Objetiva": "{:.2f}",
         "Média Até Aqui": "{:.2f}",
-    }),
-    use_container_width=True,
+    })
 )
 
 # Subconjuntos
